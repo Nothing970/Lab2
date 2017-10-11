@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="default"  extends="struts-default">
+        <action name="queryAuthorBook" class="action.OperateAction" method="queryAuthorBook">
+            <result name="success">/queryret.jsp</result>
+        </action>
+
+        <action name="deleteBook" class="action.OperateAction" method="deleteBook">
+            <result name="success">/queryret.jsp</result>
+        </action>
+        
+        <action name="editBook" class="action.OperateAction" method="editBook">
+            <result name="success">/updatebook.jsp</result>
+        </action>
+    </package>
+	
+	<package name="ajax" extends="json-default" namespace="/">  
+		<action name="new_*" class="action.OperateAction" method="{1}">  
+			<result type="json">  
+				<param name="root" >result</param>  
+			</result>  
+			<result type="json" name="error"></result>
+		</action>
+		
+		<action name="update_*" class="action.OperateAction" method="{1}">  
+			<result type="json">  
+				<param name="root" >result</param>  
+			</result>  
+			<result type="json" name="error"></result>
+		</action>  
+		
+		<action name="query_*" class="action.OperateAction" method="{1}">  
+			<result type="json">  
+				<param name="root" >result</param>  
+			</result>  
+			<result type="json" name="error"></result>
+		</action>  
+	</package> 
+</struts>
