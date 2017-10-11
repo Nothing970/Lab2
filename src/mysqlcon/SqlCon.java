@@ -14,8 +14,8 @@ public class SqlCon {
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/bookdb?useUnicode=true&characterEncoding=UTF-8","bookamd","book");
-            //con=DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn/app_bookweb?useUnicode=true&characterEncoding=UTF-8","wxn30xy3mj","wlxh23l01hk04xi4j54kjx4jk53k1xh1myxh342m");
+            //con=DriverManager.getConnection("jdbc:mysql://localhost:3306/bookdb?useUnicode=true&characterEncoding=UTF-8","bookamd","book");
+            con=DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn/app_bookweb?useUnicode=true&characterEncoding=UTF-8","wxn30xy3mj","wlxh23l01hk04xi4j54kjx4jk53k1xh1myxh342m");
             stat=con.createStatement();
             
         }

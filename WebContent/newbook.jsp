@@ -22,7 +22,7 @@
 			<button class="searchbtn" onclick="this.form.submit()"><span>开始查询 </span></button>
 		</s:form>
 	</div>
-    
+    <!-- lab2 eGit test -->
     <div class="myform" >
 		<table>
 			<tr>
